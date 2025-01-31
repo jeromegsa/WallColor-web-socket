@@ -7,7 +7,7 @@ import ToolbarComponent from "./ToolbarComponent.vue"
     
     <div class="flex  h-screen">
         
-        <div class=" w-[30%]   bg-gray-100  gap-2 p-4">
+        <div class=" w-[30%]   bg-gray-100  gap-2 p-4" id="toolbarRef">
             <ToolbarComponent></ToolbarComponent>
         </div>
 

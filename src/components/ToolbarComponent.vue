@@ -1,7 +1,7 @@
 <template>
 
     
-    <div class="flex flex-col gap-4  mt-10 gap-3">
+    <div class="flex flex-col gap-4  mt-10 gap-3 toolbar">
 
         <!-- <div>
             <h1 class="text-3xl">Outils</h1>
