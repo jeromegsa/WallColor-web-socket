@@ -1,37 +1,29 @@
-<template>
-    <div class="toolbar">
-        <div >
-            <button title="Pinceau">
-                <Paintbrush :size="30" />
-            </button>
+<template  >
 
-            <button title="Gomme">
-                <Eraser :size="30" />
-            </button>
-        </div>
+    <canvas class="  border border-red-500" ref="canvasRef" >
 
-        <div>
-            <label for="couleur">Couleur</label>
-            <input type="color" name="" id="couleur" />
-        </div>
-        <div>
-            <label for="epaisseur">Epaisseur</label>
-            <input type="range" name="" id="epaisseur" min="1" max="50" />
-        </div>
-        <div class ="flex gap-2">
-            <button>
-                Nettoyer
-                <RotateCcw />
-            </button>
-            <button>
-                Télécharger
-                <Download />
-            </button>
-        </div>
-    </div>
+    </canvas>
 </template>
+<script  setup lang="ts">
+import {ref} from 'vue'
+import {onMounted} from 'vue'
+const canvasRef=ref<HTMLCanvasElement |null >(null);
+onMounted(()=>{
+    const canvas=canvasRef.value;
+    if(!canvas) return;
+    const ctx=canvas?.getContext('2d');
+    
+//     ctx.fillStyle = "green";
+// ctx.fillRect(10, 10, 100, 100); // Un carré vert
+// ctx.strokeStyle = "red";
+// ctx.strokeRect(150, 10, 100, 100); // Un carré contour rouge
 
-<script setup lang="ts">
-import { Paintbrush, Eraser, RotateCcw, Download } from "lucide-vue-next"
+ctx.beginPath();
+ctx.moveTo(50, 50);
+ctx.lineTo(200, 50);
+ctx.lineTo(200, 200);
+ctx.stroke();
+})
+
 
 </script>

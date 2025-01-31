@@ -4,13 +4,15 @@ import ToolbarComponent from "./ToolbarComponent.vue"
 </script>
 
 <template>
-    <div class="flex justify-between border-2 border-red-500 h-screen">
-        <div class="flex-1 w-[25%]  border-2 border-yellow-500 ">
-            <CanvaComponent></CanvaComponent>
-        </div>
-        <div class="flex-2 border-2 border-green-500 ">
+    <div class="flex  h-screen">
+
+        <div class=" w-[30%]   bg-gray-100  gap-2">
             <ToolbarComponent></ToolbarComponent>
 
+        </div>
+
+        <div class="flex-1 border-2 ">
+            <CanvaComponent></CanvaComponent>
         </div>
     </div>
 </template>
